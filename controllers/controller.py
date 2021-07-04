@@ -1,4 +1,5 @@
 from flask import render_template, request
+from werkzeug.utils import redirect
 from app import app
 from models.player import *
 from models.game import *
@@ -11,9 +12,8 @@ def index():
 
 @app.route('/game', methods=['POST'])
 def game():
-    player_1.name = request.form['player_1_name']
     player_1.choice = request.form['player_1_choice']
-    player_1.name = request.form['player_1_name']
+
     player_2.choice = request.form['player_2_choice']
 
         # player 1 rock
@@ -37,4 +37,6 @@ def game():
         return "Tie"
     elif player_1.choice == "Scissors" and player_2.choice == "Paper":
         return "Scissors Beats Paper"
+    add_new_game(game)
+    return redirect('/game')
         

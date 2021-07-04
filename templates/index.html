@@ -20,21 +20,14 @@
         <form class="game-form">
         <form action="/home" method="post">
 
-        <!-- <label for="player_1_name">Player One Name?</label>
-            <input type="text" name="player_1_name" id="player_1_name">
-            <input type="submit" value="Add Player Name"> -->
 
             <label for="player_1_choice">Player One Choice?</label>
-                <select name="choice_1" id="player_1_choice">
+                <select name="player_1_choice" id="player_1_choice">
                 <option value="Rock">Rock</option>
                 <option value="Paper">Paper</option>
                 <option value="Scissors">Scissors</option>
                     <input type="submit" value="Add Choice">
                     <hr>
-
-                        <!-- <label for="player_2_name">Player Two Name?</label>
-                        <input type="text" name="player_2_name" id="player_2_name">
-                        <input type="submit" value="Add Player Name"> -->
     
                     <label for="player_2_choice">Player Two Choice?</label>
                         <select name="player_2_choice" id="player_2_choice">
@@ -44,13 +37,18 @@
                         <input type="submit" value="Add Choice">
                         <hr>
     </section>
+    <div>
+        <h1>RESULT</h1>
+    </div>
+    <hr>
     {% for game in games %}
         <section>
+            <h1>RESULT</h1>
             <p>
                 GAME:
-                {{player_1.name}} {{player_1.choice}}
+                {{ player_1.choice }}
                 !VS!
-                {{player_2.name}} {{player_2.choice}}
+                {{player_2.choice}}
 
             </p>
         </section>

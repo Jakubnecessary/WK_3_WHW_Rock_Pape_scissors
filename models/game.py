@@ -7,7 +7,7 @@ player_3 = Player("Jan", "Paper")
 
 players = [player_1, player_2, player_3]
 
-game_1 = [player_1, player_2]
+game_1 = [player_1.choice, player_2.choice]
 games = [game_1]
 
 
