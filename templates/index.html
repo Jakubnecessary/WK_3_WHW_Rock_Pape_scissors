@@ -9,38 +9,31 @@
 <body>
     <h1>Players</h1>
     {% for player in players %}
-    <div>
         <p>
             Player: {{ player.name }} {{ player.choice }}
         </p>
     {% endfor %}
-    </div>
-    <div>
     <section>
         <h2>Game</h2>
-        <h3>Choose Player One:</h3>
+        <h3>Player One Choice:</h3>
         <form class="game-form">
         <form action="/home" method="post">
 
         <label for="player_one">Player One?</label>
-        <select name="player_one" id="player_one">
-            <option value="Player_1">Player_1</option>
-            <option value="Player_2">Player_2</option>
-            <option value="Player_3">Player_3</option>
-    </section>
-    </div>
-        <div>
-        <section>
-            <h3>Choose Player Two</h3>
-            <form class="game-form_2">
-            <form action="/home" method="post">
-            <label for="player_two">Player Two?</label>
-            <select name="player_two" id="player_two">
-                <option value="Player_1">Player_1</option>
-                <option value="Player_2">Player_2</option>
-                <option value="Player_3">Player_3</option>
+        <select name="choice" id="choice">
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+            <option value="Scissors">Scissors</option>
+            <input type="submit" value="Add Choice">
 
-        </section>
-        </div>
+        <label for="player_two">Player Two?</label>
+        <select name="choice" id="choice">
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+            <option value="Scissors">Scissors</option>
+            <input type="submit" value="Add Choice">
+    </section>
+
+
 </body>
 </html>
