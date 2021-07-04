@@ -5,6 +5,6 @@ from models.game import *
 
 @app.route('/game')
 def index():
-    return render_template('index.html', title="Home", players=players)
+    return render_template('index.html', title="RPS", players=players)
 
 
