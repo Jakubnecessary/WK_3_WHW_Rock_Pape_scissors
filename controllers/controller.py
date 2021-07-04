@@ -7,8 +7,4 @@ from models.game import *
 def index():
     return render_template('index.html', title="Home", players=players)
 
-# @app.route('/game', methods=['post'])
-# def add_game():
-#     name = request.form['name']
-#     choice = request.form['choice']
-#     if request.form['choice'] == "Rock":
+
