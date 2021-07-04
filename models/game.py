@@ -7,8 +7,16 @@ player_3 = Player("Jan", "Paper")
 
 players = [player_1, player_2, player_3]
 
+game_1 = [player_1, player_2]
+games = [game_1]
+
+
 def add_new_player(player):
     players.append(player)
+
+def add_new_game(game):
+    games.append(game)
+
 
 def game_logic():
     # player 1 rock

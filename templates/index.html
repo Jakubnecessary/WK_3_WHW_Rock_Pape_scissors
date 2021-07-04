@@ -13,26 +13,48 @@
             Player: {{ player.name }} {{ player.choice }}
         </p>
     {% endfor %}
+    <hr>
     <section>
         <h2>Game</h2>
-        <h3>Players Choice:</h3>
+        <h3>Player Name and Choice:</h3>
         <form class="game-form">
         <form action="/home" method="post">
 
-        <label for="player_one">Player One?</label>
-        <select name="choice" id="choice">
-            <option value="Rock">Rock</option>
-            <option value="Paper">Paper</option>
-            <option value="Scissors">Scissors</option>
-            <input type="submit" value="Add Choice">
+        <label for="player_1_name">Player One Name?</label>
+            <input type="text" name="player_1_name" id="player_1_name">
+            <input type="submit" value="Add Player Name">
 
-        <label for="player_two">Player Two?</label>
-        <select name="choice_2" id="choice_2">
-            <option value="Rock">Rock</option>
-            <option value="Paper">Paper</option>
-            <option value="Scissors">Scissors</option>
-            <input type="submit" value="Add Choice">
+            <label for="player_1_choice">Player One Choice?</label>
+                <select name="choice_1" id="player_1_choice">
+                <option value="Rock">Rock</option>
+                <option value="Paper">Paper</option>
+                <option value="Scissors">Scissors</option>
+                    <input type="submit" value="Add Choice">
+                    <hr>
+
+                        <label for="player_2_name">Player Two Name?</label>
+                        <input type="text" name="player_2_name" id="player_2_name">
+                        <input type="submit" value="Add Player Name">
+    
+                    <label for="player_2_choice">Player Two Choice?</label>
+                        <select name="player_2_choice" id="player_2_choice">
+                        <option value="Rock">Rock</option>
+                        <option value="Paper">Paper</option>
+                        <option value="Scissors">Scissors</option>
+                        <input type="submit" value="Add Choice">
+                        <hr>
     </section>
+    {% for game in games %}
+        <section>
+            <p>
+                GAME:
+                {{player_1.name}} {{player_1.choice}}
+                !VS!
+                {{player_2.name}} {{player_2.choice}}
+
+            </p>
+        </section>
+        {% endfor %}
 
 
 </body>
